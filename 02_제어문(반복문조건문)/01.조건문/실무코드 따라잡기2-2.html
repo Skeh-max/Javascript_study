@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         //시험점수에 따른 학점을 구하세요.(단 점수는 0~100점 사이의 숫자만 입력가능)
+         /*
+         90~100: A
+         80~89: B
+         70~79: C
+         60~69: D
+         60미만 : F
+         */
+
+         //좋은 코드: 가독성이 좋은 코드, and 혹은 or 연산 최소화
+         const score = Number(prompt('점수를 입력해주세요.', 0))
+
+         if (score < 0 || score > 100) {
+            //잘못된 점수(0보다 작거나 100보다 큰) 입력시 페이지 새로고침
+            alert('잘못 입력된 점수입니다. 0~100점 사이의 점수를 입력해주세요')
+            location.reload() //새로고침
+         } else {
+            //정상적인 점수는 다 else로 오겠죠. 여기서 학점 판단
+            if (score >= 90) {
+               alert('학점:${score} A')
+            } else if (score >= 80) {
+               //else if는 하나 걸리면 나머지는 실행 안한다
+               alert('학점:${score} B')
+            } else if (score >= 70) {
+               alert('학점:${score} C')
+            } else if (score >= 60) {
+               alert('학점:${score} D')
+            } else {
+               alert('학점:${score} F')
+            }
+         }
+      </script>
+   </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>java02_</title>
+      <script>
+         // 변수를 선언합니다.
+         const date = new Date() //날짜를 구하는 객체
+         const hour = date.getHours() //날짜에서 시간을 구하는 함수
+         console.log(date)
+         console.log(hour)
+
+         // if else if 조건문
+         if (hour < 11) {
+            // 표현식 hour < 11가 참일 때 실행합니다.
+            alert('아침 먹을 시간입니다.')
+         } else if (hour < 15) {
+            // 표현식 hour < 11가 거짓이고 표현식 hour < 15가 참일 때 실행합니다.
+            alert('점심 먹을 시간입니다.')
+         } else { //else는 생략할 수도 있지만 왠만하면 넣어주는 것이 좋다. 오류 방지
+            // 표현식 hour < 15가 거짓일 때 실행합니다.
+            alert('저녁 먹을 시간입니다.')
+         }
+      </script>
+   </head>
+   <body></body>
+</html>
