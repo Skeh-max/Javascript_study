@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         //배열 안의 숫자 중 최솟값을 구하는 함수
+         function min(array) {
+            let output = array[0] //52
+            //52, 273, 32, 103, 275, 24, 57
+
+            for (const item of array) {
+               if (output > item) {
+                  // > 방향이 반대로 된다면 최대값이 나온다.
+                  output = item
+               }
+            }
+
+            return output
+         }
+
+         const testArray = [52, 273, 32, 103, 275, 24, 57]
+         console.log(`최솟값 : ${min(testArray)}`)
+
+         /* 내가 만든 쓰레기 코드 폐기
+         let token = 0
+         function min(array) {
+            for (let i = 0; i <= 5; i++) {
+               for (let j = 0; j <= 5; j++) {
+                  if (testArray[i][j] > testArray[i][j + 1]) {
+                     token = testArray[i][j]
+                     testArray[i][j] = testArray[i][j + 1]
+                     testArray[i][j + 1] = token
+                  }
+               }
+            }
+            console.log(`${testArray[0][0]}`)
+            return testArray
+         }
+
+         const testArray = [52, 273, 32, 103, 275, 24, 57]
+         console.log(`최솟값 : ${min(testArray)}`)
+         */
+      </script>
+   </body>
+</html>
