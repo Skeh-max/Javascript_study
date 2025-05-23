@@ -9,9 +9,11 @@
       <script>
          const inputField = document.querySelector('#my_input')
 
+         //입력했을 때 발생하는 이벤트
          inputField.addEventListener('input', (e) => {
+            //console.log(e) //이벤트 객체
             console.log(e.target.value) //입력한 값을 가져온다
-            // console.log(e.currentTarget.value) //입력한 값을 가져온다
+            console.log(e.currentTarget.value) //입력한 값을 가져온다
          })
       </script>
    </body>

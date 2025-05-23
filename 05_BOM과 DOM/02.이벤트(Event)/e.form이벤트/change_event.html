@@ -16,6 +16,24 @@
          const select = document.querySelector('select')
          const p = document.querySelector('p')
 
+         //select, radio, check 박스에서 사용
+         select.addEventListener(`change`, (e) => {
+            const options = e.currentTarget.options //전체 옵션 요소
+            const index = e.currentTarget.options.selectedIndex //선택한 옵션의 인덱스 번호
+
+            //options[index] : 현재 선택한 옵션 요소
+            //요소.textContent : 요소가 가진 텍스트를 읽어옴
+            p.textContent = `선택: ${options[index].textContent}`
+
+            //옵션의 value 값 읽어오기
+            const selectedFood1 = event.currentTarget.value
+            console.log(selectedFood1)
+            //2가지 방법이 있따
+            const selectedFood2 = event.target.value
+            console.log(selectedFood2)
+         })
+
+         //--------------------------------------------------
          //event 객체: 이벤트가 발생했을때 해당 이벤트의 정보가 들어있다
          select.addEventListener('change', (event) => {
             // 텍스트 출력
